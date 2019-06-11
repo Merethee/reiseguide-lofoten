@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Reiseguide - Aktiviteter</title>
+   <link rel="stylesheet" href="./style.css">
+   <link rel="stylesheet" href="https://use.typekit.net/bum1gwa.css"> <!--futura & adelle font-->
+</head>
+<body>
+<div class="wrapper">
+   <div class="grid-container">
+      <div class="menu">
+         <ul>
+            <li><a href="index.html">Hjem</a></li>
+            <li><a href="overnatting.html">Overnatting</a></li>
+            <li><a href="attraksjoner.html">Attraksjoner</a></li>
+            <li><a class="current" href="aktiviteter.html">Aktiviteter</a></li>
+         </ul>
+      </div>
+
+
+      <div class="ham-menu">
+         <ul id="my-links">
+            <li><a class="current" href="index.html">Hjem</a></li>
+            <li><a href="overnatting.html">Overnatting</a></li>
+            <li><a href="attraksjoner.html">Attraksjoner</a></li>
+            <li><a href="aktiviteter.html">Aktiviteter</a></li>
+         </ul>
+         <img class="ham-icon" src="icons/menu.svg" alt="ham-menu">
+         <img class="ham-close" src="icons/x.svg" alt="close-ham-menu">
+      </div>
+      
+         
+      <div class="page-topImg active">
+         <img class="info" src="icons/info.svg" alt="info">
+         <div class="text-info">
+            <p>
+               Få en flott opplevelse på Toppliodden. Utfordrende terreng, 
+               så denne passer for de aktive. 
+            </p>
+         </div>
+      </div>
+
+      <div class="page-title">
+         <h1>Aktiviteter</h1>
+      </div>
+
+      <div class="page-intro-img-1 active">
+         <img class="myImg" src="image/active-intro-img-1.jpg" alt="Å padle kajakk er en populær aktivitet Lofoten" style="width:100%;">
+      </div>
+      <div class="page-intro-img-2 active">
+         <img class="myImg" src="image/active-intro-img-2.jpg" alt="Ønsker du en utfordring kan du klatre i Nekfjellet" style="width:100%;">
+      </div>
+      <div class="page-click-img" style="margin-top: -70px;">
+         <p>
+            Klikk på bildene for å se de store
+         </p>
+      </div>
+
+      <div id="myModal" class="modal">
+         <img class="close" src="icons/x-hvit.png" alt="close">
+         <img class="modal-content" id="img01">
+         <div id="caption"></div>
+      </div>
+      <div id="fade"></div>
+
+      <div class="page-intro-text">
+         <p>
+            Aktivitetene i Lofoten er uendelige, og det er noe for en hver smak. 
+            I Lofoten kan du dra på <span style="font-weight: 700;">havørnsafari, padle kajakk, dra på sykkelturer, 
+            smake på tørrfisk,kjøre RIB, surfe, gjøre yoga på stranda, ri på hest, gå fotturer,
+            klatre, dra på fotografikurs og mye mer.</span> Dersom du ønsker å bare slappe av er det flotte
+            strender hvor man kan ta livet med ro. 
+
+         </p>
+      </div>
+
+      <div class="page-title-2">
+         <h2>Top 3 aktiviteter</h2>
+      </div>
+
+      <div class="text-box-1">
+         <p style="color: gray;">Fiskevika</p>
+         <h3>Lofotfiske</h3>
+         <div class="underline"></div>
+         <p>
+            Opplev Lofotfiske og lær om dens historie. Det byr på en rekke tilbud 
+            til å fiske i Lofoten, hvor du kan være med å fange din egen fisk. Du kan
+            dra på en 5-timers tur med erfarent mannskap, eller så finnes det en rekke
+            pakketilbud med overnatting og opplevelser på havet. Hvis du er heldig, kan
+            du lage mat av din egen fangst. 
+         </p>
+      </div>
+      <div class="text-box-2">
+            <p style="color: gray;">Grytinden</p>
+            <h3>Fjelltur</h3>
+            <div class="underline"></div>
+            <p>
+               Fjelltur er den mest kjente og populære aktiviteten du kan gjøre i Lofoten. 
+               Det er fjellturer som passer for alle, og noen mer krevende. Du skaper din 
+               opplevelse etter ønsker og behov. Det finnes guidet turer som forteller om 
+               historier rundt stedet som du kan melde deg på. Dersom du går uten en guide, 
+               anbefaler de at du er godt forberedt på turen og tar med kart. 
+            </p>
+      </div>
+      <div class="text-box-3">
+            <p style="color: gray;">Boltstranda</p>
+            <h3>Hesteridning</h3>
+            <div class="underline"></div>
+            <p>
+               Ta en magisk tur langs de hvite strendene i Lofoten på en hesterygg.
+               Du kan ta disse turene både på dagtid eller ri i solnedgangen. Du kan 
+               ha en som leier hesten for deg, eller du kan du ri selv – men man rir 
+               alltid sammen i grupper. Alle hestene er godt trente og er glade for å møte nye folk.
+               Dette er en aktivitet som passer for alle, både store og små. Du kan velge mellom korte
+               eller lengre turer. 
+            </p>
+      </div>
+
+      <div class="img-box-1 active"></div>
+      <div class="img-text-1">
+         <p>Fang egen fisk i Fiskevika</p>
+      </div>
+
+      <div class="img-box-2 active"></div>
+      <div class="img-text-2">
+         <p>Fantastisk fjelltur i Grytinden</p>
+      </div>
+
+      <div class="img-box-3 active"></div>
+      <div class="img-text-3">
+         <p>Ri islandshester på Boltstanda</p>
+      </div>
+
+      <div class="page-to-top" onclick="topFunction()">
+         <img src="icons/arrow-up.png" alt="arrow-up">
+      </div>
+      
+      <div class="page-footer">footer</div>
+   </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" ></script>
+<script src="https://unpkg.com/tilt.js@1.1.21/dest/tilt.jquery.min.js"></script>
+<script src="./main.js"></script>
+</body>
+</html>

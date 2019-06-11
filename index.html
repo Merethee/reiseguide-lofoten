@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Reiseguide Lofoten</title>
+   <link rel="stylesheet" href="./style.css">
+   <link rel="stylesheet" href="https://use.typekit.net/bum1gwa.css"> <!--futura & adelle font-->
+</head>
+<body>
+<div class="wrapper">
+   <div class="grid-container">
+      <div class="menu">
+         <ul>
+            <li><a class="current" href="index.html">Hjem</a></li>
+            <li><a href="overnatting.html">Overnatting</a></li>
+            <li><a href="attraksjoner.html">Attraksjoner</a></li>
+            <li><a href="aktiviteter.html">Aktiviteter</a></li>
+         </ul>
+      </div>
+
+      <div class="ham-menu">
+         <ul id="my-links">
+            <li><a class="current" href="index.html">Hjem</a></li>
+            <li><a href="overnatting.html">Overnatting</a></li>
+            <li><a href="attraksjoner.html">Attraksjoner</a></li>
+            <li><a href="aktiviteter.html">Aktiviteter</a></li>
+         </ul>
+         <img class="ham-icon" src="icons/menu.svg" alt="ham-menu">
+         <img class="ham-close" src="icons/x.svg" alt="close-ham-menu">
+      </div>
+      
+      <div class="intro-img js-tilt" data-tilt></div>
+
+      <div class="intro-video" onclick="videobox_open();">
+         <img class="play" src="icons/play.png" alt="play">
+      </div>
+
+      <div id="video-box">
+         <a class="boxclose" id="boxclose" onclick="videobox_close();">
+            <img src="icons/x-hvit.png" alt="close">
+         </a>
+         <video id="nature-video" width="800" controls>
+            <source src="video/Lofoten.mp4" type="video/mp4">
+            <!--Browser does not support <video> tag -->
+         </video>
+      </div>
+
+      <div id="fade" onClick="videobox_close();"></div>
+
+      <div class="intro-title">
+         <h1>Reiseguide til Lofoten</h1>
+      </div>
+
+      <div class="line"></div>
+
+      <div class="intro-text">
+         <p>
+         Lofoten er Norges mest omtalte sted, og det er en grunn til det. 
+         Den spektakulære naturen og de mektige fjellene vil gi deg en opplevelse du aldri vil glemme. 
+         Å reise til denne unike øygruppen er en drøm for de fleste nordmenn og turister. 
+         Lofoten er et sted for alle med ulike tilbud.
+         </p>
+         <p>
+         I Lofoten kan du blant annet å fiske lofottorsken, gå i fjell, dra på museum,
+         surfe eller bare nyte flotte omgivelser. Du kan bo i alt fra sjarmerende rorbuer
+         til å ta med eget telt. 
+         </p>
+         <p>
+         I denne korte reiseguiden får du informasjon om overnatting, 
+         aktiviteter og attraksjoner. Les og bli inspirert til å dra til vakre Lofoten. 
+         En unik perle med mye sjarm. 
+         </p> 
+         
+         <p style="font-weight: 700;">Du skaper dine egne opplevelser!</p>
+      </div>
+      
+      <div class="scroll">
+         <p>Skroll</p>
+      </div>
+
+      <div class="slider-title">
+         <img src="icons/place.svg" alt="place">
+         <h1>Populære steder i Lofoten</h1>
+      </div>
+
+      <div class="slider-container">
+         <div class="btn-container">
+            <button class="prev"></button>
+            <button class="next"></button>
+         </div>
+         <div class="siema">
+            <div><img src="image/slide1.jpg" alt="Lofoten image" /><p>Strandbu</p></div>
+            <div><img src="image/slide2.jpg" alt="Lofoten image" /><p>Lervsikten</p></div>
+            <div><img src="image/slide3.jpg" alt="Lofoten image" /><p>Hemdalen</p></div>
+            <div><img src="image/slide4.jpg" alt="Lofoten image" /><p>Sevimsen</p></div>
+            <div><img src="image/slide5.jpg" alt="Lofoten image" /><p>Nekfjellet</p></div>
+            <div><img src="image/slide6.jpg" alt="Lofoten image" /><p>Viksbukta</p></div>
+         </div>
+      </div>
+
+      <div class="to-top" onclick="topFunction()">
+         <img src="icons/arrow-up.png" alt="arrow-up">
+      </div>
+      
+      <div class="footer">footer</div>
+   </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" ></script>
+<script src="https://unpkg.com/tilt.js@1.1.21/dest/tilt.jquery.min.js"></script>
+<script src="./siema.min.js"></script>
+<script src="./main.js"></script>
+</body>
+</html>
