@@ -759,14 +759,14 @@ $$ |  $$ |$$$$$$$$\ \$$$$$$  |$$ |       $$$$$$  |$$ | \$$ |\$$$$$$  |$$$$$$\   
         top: 20px; 
     }
 
-    .modal-content {
-        top: 30%; 
-        left: 37%; 
-    }
-
     #video-box {
         top: 42%;
         left: 46%;
+    }
+
+    .modal-content {
+        top: 30%; 
+        left: 37%; 
     }
 }
 
@@ -777,22 +777,25 @@ $$ |  $$ |$$$$$$$$\ \$$$$$$  |$$ |       $$$$$$  |$$ | \$$ |\$$$$$$  |$$$$$$\   
         max-width: 1280px; 
     }
 
-    .modal-content {
-        top: 30%; 
-        left: 25%; 
-      }
-
+    #video-box {
+        left: 42%;
+    }
       #boxclose {
         right: -190px; 
     }
 
-    #video-box {
-        left: 42%;
+    .modal-content {
+        top: 20%; 
+        left: 25%; 
     }
 }
 
 
 @media only screen and (max-width: 1350px) {
+    
+    .menu {
+        right: 0; 
+    }
 
     img.info {
         right: 30px; 
@@ -801,7 +804,6 @@ $$ |  $$ |$$$$$$$$\ \$$$$$$  |$$ |       $$$$$$  |$$ | \$$ |\$$$$$$  |$$$$$$\   
     .text-info {
         right: 0px; 
     }
-
 }
 
 @media only screen and (max-width: 1195px) {
@@ -823,6 +825,11 @@ $$ |  $$ |$$$$$$$$\ \$$$$$$  |$$ |       $$$$$$  |$$ | \$$ |\$$$$$$  |$$$$$$\   
 
  
 @media only screen and (max-width: 1160px) {
+
+    .intro-video {
+        top: 520px;
+        right: 20px; 
+    }
 
     .grid-container .scroll {
         grid-column: 5/6;
@@ -903,16 +910,19 @@ $$ |  $$ |$$$$$$$$\ \$$$$$$  |$$ |       $$$$$$  |$$ | \$$ |\$$$$$$  |$$$$$$\   
         grid-column: 2/5;
         grid-row: 26/29;
     }
-
-    .intro-video {
-        top: 520px;
-        right: 20px; 
-    }
-    
 }
 
 
 @media only screen and (max-width: 1025px) {
+
+    .page-intro-text{
+        width: 500px; 
+    }
+
+    .intro-video {
+        top: 520px;
+        right: 30px; 
+    }
 
     .grid-container .slider-title {
         grid-column: 1/5;
@@ -933,19 +943,9 @@ $$ |  $$ |$$$$$$$$\ \$$$$$$  |$$ |       $$$$$$  |$$ | \$$ |\$$$$$$  |$$$$$$\   
         left: 15%; 
     }
 
-    .intro-video {
-        top: 520px;
-        right: 30px; 
-    }
-    
-    .page-intro-text{
-        width: 500px; 
-    }
-
     .text-box-1, .text-box-2, .text-box-3 {
         width: 320px; 
     }
-    
 }
 
 @media only screen and (max-width: 1010px) {
@@ -954,12 +954,7 @@ $$ |  $$ |$$$$$$$$\ \$$$$$$  |$$ |       $$$$$$  |$$ | \$$ |\$$$$$$  |$$$$$$\   
         grid-column: 1/5;
         grid-row: 3/5; 
     }
-
-    .grid-container .scroll {
-        grid-column: 5/6;
-        grid-row: 4/5; 
-    }
-
+    
     #video-box {
         top: 42%;
         left: 37%;
@@ -1021,18 +1016,6 @@ $$  /      $$$$$$  |\$$$$$$  |$$$$$$$  |$$  /\$$\
         right:0; 
     }
 
-    .intro-video {
-        position: relative;
-    }
-
-    .modal-content {
-        left: 0; 
-    }
-
-    img.info, .text-info {
-        display: none; 
-    }
-
     .grid-container .intro-title {
         grid-column: 1/7;
         grid-row: 5/6; 
@@ -1053,57 +1036,71 @@ $$  /      $$$$$$  |\$$$$$$  |$$$$$$$  |$$  /\$$\
         grid-row: 2/5; 
     } 
 
-    .grid-container .intro-video {
-        grid-column: 9/10;
-        grid-row: 2/4; 
-    }
-
     .intro-img {
-       width: 100%; 
+        width: 100%; 
         background-position: top; 
     } 
 
-    .modal-content {
-        width: 100%;
+    .grid-container .intro-video {
+        grid-column: 8/9;
+        grid-row: 1/3; 
     }
 
-    .scroll{
-        display: none; 
+    .intro-video {
+        width: 200px;
+        height: 200px; 
+        position: relative;
     }
 
     .intro-video:hover {
         transform: scale(1); 
     }
 
-    .grid-container .btn-container {
-        grid-column: 5/10;
+    #video-box {
+        top: 42%;
+        left: 42%;
+        width: 200px; 
+        max-width: 200px;
+        max-height: 200px;
+        margin-left: -350px;
+        margin-top: -180px;
     }
-    
-    .prev {
-        margin-right: 70px; 
+      
+    #boxclose {
+        right: -560px; 
+        top: -45px; 
     }
 
     .grid-container .slider-title {
         grid-column: 1/5;
         grid-row: 9/10; 
     }
-    
-    .grid-container .btn-container {
-        grid-column: 7/10;
-        grid-row: 8/9; 
-    }
-    
+
     .grid-container .slider-container {
         grid-column: 1/10;
         grid-row: 9/13; 
     }
 
+    .grid-container .btn-container {
+        grid-column: 7/10;
+        grid-row: 8/9; 
+    }
+
+    .prev {
+        margin-right: 70px; 
+    }
+
     /* Undersidene */
+
+    img.info, .text-info {
+        display: none; 
+    }
 
     .grid-container .page-topImg {
         grid-column: 1/5;
         grid-row: 2/8; 
     }
+
     .grid-container .page-title {
         grid-column: 5/10;
         grid-row: 3/4;
@@ -1118,6 +1115,11 @@ $$  /      $$$$$$  |\$$$$$$  |$$$$$$$  |$$  /\$$\
         width: 310px; 
     }
 
+    .modal-content {
+        width: 100%;
+        left: 0; 
+    }
+
     .page-intro-img-1,.page-intro-img-2 , .page-click-img {
       display: none; 
     }
@@ -1126,16 +1128,16 @@ $$  /      $$$$$$  |\$$$$$$  |$$$$$$$  |$$  /\$$\
         grid-column: 1/5;
         grid-row: 9/10;
     } 
+
+    .text-box-1, .text-box-2, .text-box-3 {
+        width: 310px; 
+    }
     
     .grid-container .text-box-1 {
         grid-column: 1/5;
         grid-row: 10/13;
     }
 
-    .text-box-1, .text-box-2, .text-box-3 {
-        width: 310px; 
-    }
-    
     .grid-container .text-box-2 {
         grid-column: 1/5;
         grid-row: 14/17;
@@ -1169,7 +1171,6 @@ $$  /      $$$$$$  |\$$$$$$  |$$$$$$$  |$$  /\$$\
         grid-column: 1/10;
         grid-row: 22/24;
     }
-   
 }
 
 @media only screen and (max-width: 730px) {
@@ -1178,12 +1179,12 @@ $$  /      $$$$$$  |\$$$$$$  |$$$$$$$  |$$  /\$$\
         display: none;
     }
 
-    .btn-container{
-        text-align:center; 
-  
-    }
     .grid-container .btn-container {
         grid-column: 2/6;
+    }
+
+    .btn-container {
+        text-align: center; 
     }
 
     .prev {
@@ -1193,6 +1194,10 @@ $$  /      $$$$$$  |\$$$$$$  |$$$$$$$  |$$  /\$$\
 
 @media only screen and (max-width: 670px) {
 
+    .menu, .underline {  
+        display: none; 
+    }
+    
     .grid-container .intro-title {
         grid-column: 2/9;
         grid-row: 5/6; 
@@ -1220,7 +1225,7 @@ $$  /      $$$$$$  |\$$$$$$  |$$$$$$$  |$$  /\$$\
     }
 
     .grid-container .page-title {
-        grid-column: 3/5;
+        grid-column: 2/4;
         grid-row: 2/3;
     }
 
@@ -1229,13 +1234,12 @@ $$  /      $$$$$$  |\$$$$$$  |$$$$$$$  |$$  /\$$\
         grid-row: 3/5;
     }
 
-    .page-intro-text, .text-box-1, .text-box-2, .text-box-3 {
-        width: 400px; 
+    .page-title-2 {
+        display: none; 
     }
 
-    .grid-container .img-box-1 {
-        grid-column: 2/9;
-        grid-row: 6/9;
+    .page-intro-text, .text-box-1, .text-box-2, .text-box-3 {
+        width: 400px; 
     }
 
     .grid-container .text-box-1 {
@@ -1243,19 +1247,9 @@ $$  /      $$$$$$  |\$$$$$$  |$$$$$$$  |$$  /\$$\
         grid-row: 9/12;
     }
 
-    .grid-container .img-box-2 {
-        grid-column: 2/9;
-        grid-row: 13/16;
-    }
-    
     .grid-container .text-box-2 {
         grid-column: 2/9;
         grid-row: 16/19;
-    }
-    
-    .grid-container .img-box-3 {
-        grid-column: 2/9;
-        grid-row: 20/23;
     }
 
     .grid-container .text-box-3 {
@@ -1263,8 +1257,19 @@ $$  /      $$$$$$  |\$$$$$$  |$$$$$$$  |$$  /\$$\
         grid-row: 23/25;
     }
 
-    .page-title-2 {
-        display: none; 
+    .grid-container .img-box-1 {
+        grid-column: 2/9;
+        grid-row: 6/9;
+    }
+
+    .grid-container .img-box-2 {
+        grid-column: 2/9;
+        grid-row: 13/16;
+    }
+    
+    .grid-container .img-box-3 {
+        grid-column: 2/9;
+        grid-row: 20/23;
     }
 
     .grid-container .page-footer {
@@ -1280,32 +1285,13 @@ $$  /      $$$$$$  |\$$$$$$  |$$$$$$$  |$$  /\$$\
         margin-left: 200px; 
     }
 
-    .menu, .underline {  
-        display: none; 
-    }
-
     .ham-menu, .to-top, .page-to-top {
         display: block; 
     }
-
-    .grid-container .page-title {
-        grid-column: 2/4;
-        grid-row: 2/3;
-    }
-
-    .grid-container .page-intro-text {
-        grid-column: 2/8;
-        grid-row: 3/5;
-    } 
-
 }
 
 
 @media only screen and (max-width: 425px) {
-
-    .ham-menu #my-links li {
-        margin-left: 300px; 
-    }
 
     .grid-container .text-box-1 {
         grid-column: 2/9;
@@ -1326,6 +1312,9 @@ $$  /      $$$$$$  |\$$$$$$  |$$$$$$$  |$$  /\$$\
         width: 300px; 
     }
 
+    .ham-menu #my-links li {
+        margin-left: 300px; 
+    }
 }
 
 @media only screen and (max-width: 375px) {
