@@ -19,32 +19,31 @@ $(document).ready(function(){
       maxGlare:       1      
     })
 
-    function myFunction(x) {
-      if (x.matches) { // If media query matches
-        $('.js-tilt').tilt({
-          maxTilt:        0
-        })
-      } else {
-        $('.js-tilt').tilt({
-          maxTilt:        10,
-          perspective:    2000,   
-          easing:         "cubic-bezier(.03,.98,.52,.99)",    
-          scale:          1,      
-          speed:          200,   
-          transition:     true,   
-          disableAxis:    null,   
-          reset:          true,   
-          glare:          false,  
-          maxGlare:       1      
-        })
-      }
+  function tiltFunction(mediaq) {
+    if (mediaq.matches) { 
+      $('.js-tilt').tilt({
+        maxTilt:        0
+      })
+    } else {
+      $('.js-tilt').tilt({
+        maxTilt:        10,
+        perspective:    2000,   
+        easing:         "cubic-bezier(.03,.98,.52,.99)",    
+        scale:          1,      
+        speed:          200,   
+        transition:     true,   
+        disableAxis:    null,   
+        reset:          true,   
+        glare:          false,  
+        maxGlare:       1      
+      })
     }
-    
-    var x = window.matchMedia("(max-width: 768px)")
-    myFunction(x) // Call listener function at run time
-    x.addListener(myFunction) // Attach listener function on state changes
   }
-
+      
+    var mediaq = window.matchMedia("(max-width: 768px)")
+    tiltFunction(mediaq) 
+    mediaq.addListener(tiltFunction)
+  }
 
 
   // image slider 
@@ -66,11 +65,6 @@ $(document).ready(function(){
   }
 
 
-  $(".info").on("mouseover mouseout",function()
-  {                  
-    $(".text-info").toggle();
-  });
-
   // remove scroll when hit bottom on page 
 
   var scroll = document.querySelector('.scroll');
@@ -83,8 +77,8 @@ $(document).ready(function(){
           document.querySelector('.scroll').style.display='none';
       }
     });
-
   }
+
 });
 
 
@@ -100,14 +94,14 @@ window.document.onkeydown = function(e) {
 }
 
 function videobox_open() {
-  var videoBoxVideo = document.getElementById("nature-video");
+  var videoBoxVideo = document.getElementById("lofoten-video");
   document.getElementById('video-box').style.display = 'block';
   document.getElementById('fade').style.display = 'block';
   videoBoxVideo.play();
 }
 
 function videobox_close() {
-  var videoBoxVideo = document.getElementById("nature-video");
+  var videoBoxVideo = document.getElementById("lofoten-video");
   document.getElementById('video-box').style.display = 'none';
   document.getElementById('fade').style.display = 'none';
   videoBoxVideo.pause();
@@ -115,12 +109,13 @@ function videobox_close() {
 
 
 
-// click on image to get bigger
+// click on image to get bigger (modal)
 
 var modal = document.getElementById("myModal");
 var img = document.getElementsByClassName("myImg");
 var modalImg = document.getElementById("img01");
 var captionText = document.getElementById("caption");
+var span = document.getElementsByClassName("close")[0];
 var i;
 
 for(i=0;i< img.length;i++) {    
@@ -132,10 +127,8 @@ for(i=0;i< img.length;i++) {
   }
 }
 
-var span = document.getElementsByClassName("close")[0];
-
 if(span) {
-  span.onclick = function() { 
+    span.onclick = function() { 
     modal.style.display = "none";
     document.getElementById('fade').style.display = 'none';
   }
@@ -149,7 +142,7 @@ var hamMenu = document.querySelector(".ham-icon");
 var closeHam = document.querySelector(".ham-close"); 
 
 hamMenu.addEventListener("click", openMenu);
-
+closeHam.addEventListener("click", closeMenu);
 
 function openMenu() {
   if (myLinks.style.display === "block") {
@@ -160,8 +153,6 @@ function openMenu() {
     closeHam.style.display = "block";
   }
 }
-
-closeHam.addEventListener("click", closeMenu);
 
 function closeMenu(){
   if (closeHam.style.display === "block") {
