@@ -87,9 +87,11 @@ $$ |  $$\ $$\   $$ |$$\   $$ |      $$ |  $$ |$$ |  $$ |  $$ |  $$ |  $$ |
 
 /* Forsiden */
 
+
  .grid-container .intro-img {
     grid-column: 5/10;
     grid-row: 2/6; 
+    z-index: 1; 
 } 
 
 .grid-container .intro-video {
@@ -331,8 +333,8 @@ $$ | \_/ $$ |$$$$$$$$\ $$ | \$$ |\$$$$$$  |
     display: none;
     width: 50px;
     position: relative;
-    top: 10px; 
-    left: 10px;  
+    top: 18px; 
+    left: 15px;  
 }
 
 .ham-close, .ham-icon, #my-links li a {
@@ -359,6 +361,10 @@ $$$$$$\ $$ | \$$ |   $$ |   $$ |  $$ | $$$$$$  |
     background-repeat: no-repeat; 
     background-position: top center; 
     background-size: 100%; 
+}
+
+.intro-text {
+    margin-left: -15px;  
 }
 
 .intro-video {
@@ -453,7 +459,8 @@ $$$$$$\ $$ | \$$ |   $$ |   $$ |  $$ | $$$$$$  |
 
 .line {
     width: 50px;
-    margin-left: 15px; 
+    position: relative;
+    top: -10px; 
     border-bottom: 1px solid #222; 
 } 
 
@@ -845,14 +852,20 @@ $$ |  $$ |$$$$$$$$\ \$$$$$$  |$$ |       $$$$$$  |$$ | \$$ |\$$$$$$  |$$$$$$\   
     
     .intro-text, .intro-title {
         padding: 16px; 
+        margin-left: 0;   
+    }
+
+    .line {
+        margin-left: 16px; 
+        top: 0; 
+    } 
+        
+    .slider-title img {
+        margin-top: -20px; 
     }
 
     .page-title-2, .text-box-1, .text-box-2, .text-box-3  {
         padding: 24px;
-    }
-    
-    .slider-title img {
-        margin-top: -20px; 
     }
 }
 
@@ -1129,7 +1142,7 @@ $$  /      $$$$$$  |\$$$$$$  |$$$$$$$  |$$  /\$$\
       
     #boxclose {
         right: -560px; 
-        top: -45px; 
+        top: -70px; 
     }
 
     .grid-container .slider-title {
@@ -1387,10 +1400,23 @@ $$  /      $$$$$$  |\$$$$$$  |$$$$$$$  |$$  /\$$\
     .ham-menu #my-links li {
         margin-left: 210px; 
     }
+
+    .intro-text, .intro-title {
+        margin-left: -30px; 
+    }
+
+    .page-title {
+        margin-left: 15px; 
+    }
+
 } 
 
 @media only screen and (max-width: 425px) {
 
+    .grid-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
     .grid-container .text-box-1 {
         grid-column: 2/9;
         grid-row: 9/12;
@@ -1406,8 +1432,12 @@ $$  /      $$$$$$  |\$$$$$$  |$$$$$$$  |$$  /\$$\
         grid-row: 23/25;
     }
     
-    .page-intro-text, .text-box-1, .text-box-2, .text-box-3,  .intro-text  {
+    .page-intro-text, .text-box-1, .text-box-2, .text-box-3, .intro-text  {
         width: 300px; 
+    }
+
+    .page-title, .img-box-1, .img-box-2, .img-box-3{
+        margin-left: 15px; 
     }
 
     .ham-menu #my-links li {
@@ -1416,7 +1446,14 @@ $$  /      $$$$$$  |\$$$$$$  |$$$$$$$  |$$  /\$$\
 }
 
 @media only screen and (max-width: 375px) {
- 
+    .page-title, .img-box-1, .img-box-2, .img-box-3 {
+        margin-left: 50px; 
+    }
+
+    .page-intro-text, .text-box-1, .text-box-2, .text-box-3 {
+        margin-left: 30px; 
+    }
+
     .grid-container .intro-img {
         grid-template-columns: repeat(1, 1fr);
         grid-column: 1/10;
