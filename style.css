@@ -87,8 +87,7 @@ $$ |  $$\ $$\   $$ |$$\   $$ |      $$ |  $$ |$$ |  $$ |  $$ |  $$ |  $$ |
 
 /* Forsiden */
 
-
- .grid-container .intro-img {
+.grid-container .intro-img {
     grid-column: 5/10;
     grid-row: 2/6; 
     z-index: 1; 
