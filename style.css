@@ -25,6 +25,32 @@ h1, h2, h3 {
     margin: 0 auto;     
 }
 
+.to-top, .page-to-top {
+    display: none;
+    width: 100px; 
+    position: relative;
+    top: 0; 
+    left: 0; 
+}
+
+.to-top img, .page-to-top img {
+    width: 40px; 
+    cursor: pointer;
+}
+
+.footer, .page-footer {
+    display: inline-block; 
+}
+
+.footer span, .page-footer span {
+    padding: 24px; 
+}
+
+.footer-line, .page-footer-line {
+    width: 100%; 
+    border-bottom: 1px solid gray; 
+}
+
 
 /*
 
@@ -106,9 +132,14 @@ $$ |  $$\ $$\   $$ |$$\   $$ |      $$ |  $$ |$$ |  $$ |  $$ |  $$ |  $$ |
     grid-row: 9/13; 
 }
 
+.grid-container .footer-line {
+    grid-column: 1/10;
+    grid-row: 13/14;
+}
+
 .grid-container .footer {
     grid-column: 1/10;
-    grid-row: 14/16;
+    grid-row: 14/15;
 }
 
 .grid-container .to-top {
@@ -203,9 +234,14 @@ $$ |  $$\ $$\   $$ |$$\   $$ |      $$ |  $$ |$$ |  $$ |  $$ |  $$ |  $$ |
     grid-row: 25/26;
 }
 
+.grid-container .page-footer-line {
+    grid-column: 1/10;
+    grid-row: 30/31;
+}
+
 .grid-container .page-footer {
     grid-column: 1/10;
-    grid-row: 30/32;
+    grid-row: 31/32;
 }
 
 /*
@@ -335,6 +371,7 @@ $$$$$$\ $$ | \$$ |   $$ |   $$ |  $$ | $$$$$$  |
     background-size: cover; 
     background-repeat: no-repeat; 
     background-position: center; 
+    z-index: 1;
 }
 
 .intro-video img {
@@ -505,19 +542,6 @@ $$ |      $$ |  $$ |\$$$$$$  |$$$$$$$$\       \$$$$$$  |  $$ |       $$ |    $$$
 .page-title {
     margin: 0 auto; 
     text-align: center; 
-}
-
-.to-top, .page-to-top {
-    display: none;
-    width: 100px; 
-    position: relative;
-    top: 0; 
-    left: 0; 
-}
-
-.to-top img, .page-to-top img {
-    width: 40px; 
-    cursor: pointer;
 }
 
 img.info, .text-info {
@@ -754,6 +778,10 @@ $$ |  $$ |$$$$$$$$\ \$$$$$$  |$$ |       $$$$$$  |$$ | \$$ |\$$$$$$  |$$$$$$\   
         background-position: center; 
     }
 
+    .scroll {
+        display: none; 
+    }
+
     .page-click-img {
         position: relative;
         top: 20px; 
@@ -777,10 +805,15 @@ $$ |  $$ |$$$$$$$$\ \$$$$$$  |$$ |       $$$$$$  |$$ | \$$ |\$$$$$$  |$$$$$$\   
         max-width: 1280px; 
     }
 
+    .scroll {
+        display: block; 
+    }
+
     #video-box {
         left: 42%;
     }
-      #boxclose {
+    
+    #boxclose {
         right: -190px; 
     }
 
@@ -915,7 +948,7 @@ $$ |  $$ |$$$$$$$$\ \$$$$$$  |$$ |       $$$$$$  |$$ | \$$ |\$$$$$$  |$$$$$$\   
 
 @media only screen and (max-width: 1025px) {
 
-    .page-intro-text{
+    .page-intro-text {
         width: 500px; 
     }
 
@@ -938,6 +971,16 @@ $$ |  $$ |$$$$$$$$\ \$$$$$$  |$$ |       $$$$$$  |$$ | \$$ |\$$$$$$  |$$$$$$\   
         grid-column: 1/10;
         grid-row: 8/12; 
     }   
+
+    .grid-container .footer-line {
+        grid-column: 1/10;
+        grid-row: 12/13;
+    }
+    
+    .grid-container .footer {
+        grid-column: 1/10;
+        grid-row: 13/14;
+    }
 
     .modal-content {
         left: 15%; 
@@ -1090,6 +1133,16 @@ $$  /      $$$$$$  |\$$$$$$  |$$$$$$$  |$$  /\$$\
         margin-right: 70px; 
     }
 
+    .grid-container .footer-line {
+        grid-column: 1/10;
+        grid-row: 13/14;
+    }
+    
+    .grid-container .footer {
+        grid-column: 1/10;
+        grid-row: 14/15;
+    }
+
     /* Undersidene */
 
     img.info, .text-info {
@@ -1166,10 +1219,15 @@ $$  /      $$$$$$  |\$$$$$$  |$$$$$$$  |$$  /\$$\
     .img-text-1, .img-text-2, .img-text-3 {
         display: none; 
      }
+
+     .grid-container .page-footer-line {
+        grid-column: 1/10;
+        grid-row: 22/23;
+    }    
      
     .grid-container .page-footer {
         grid-column: 1/10;
-        grid-row: 22/24;
+        grid-row: 23/24;
     }
 }
 
@@ -1272,9 +1330,14 @@ $$  /      $$$$$$  |\$$$$$$  |$$$$$$$  |$$  /\$$\
         grid-row: 20/23;
     }
 
-    .grid-container .page-footer {
+    .grid-container .footer-line {
         grid-column: 1/10;
-        grid-row: 26/28;
+        grid-row: 14/15;
+    }
+    
+    .grid-container .footer {
+        grid-column: 1/10;
+        grid-row: 15/16;
     }
 
     #my-links {
@@ -1282,14 +1345,31 @@ $$  /      $$$$$$  |\$$$$$$  |$$$$$$$  |$$  /\$$\
     }
 
     .ham-menu #my-links li {
-        margin-left: 200px; 
+        margin-left: 140px; 
     }
 
     .ham-menu, .to-top, .page-to-top {
         display: block; 
     }
+
+    .grid-container .page-footer-line {
+        grid-column: 1/10;
+        grid-row: 26/27;
+    }    
+     
+    .grid-container .page-footer {
+        grid-column: 1/10;
+        grid-row: 27/28;
+    }
 }
 
+
+@media only screen and (max-width: 500px){
+
+    .ham-menu #my-links li {
+        margin-left: 210px; 
+    }
+} 
 
 @media only screen and (max-width: 425px) {
 
