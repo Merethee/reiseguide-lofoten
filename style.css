@@ -511,6 +511,10 @@ $$\   $$ |$$ |        $$ |  $$ |  $$ |$$ |      $$ |  $$ |
     margin-right: 10px; 
 }
 
+button {
+    background: #fff; 
+}
+
 .prev, .next {
     width: 50px;
     height: 50px;
@@ -785,6 +789,10 @@ $$ |  $$ |$$$$$$$$\ \$$$$$$  |$$ |       $$$$$$  |$$ | \$$ |\$$$$$$  |$$$$$$\   
         background-position: center; 
     }
 
+    .slider-title img {
+        top: -40px;  
+    }
+
     .scroll {
         display: none; 
     }
@@ -824,6 +832,15 @@ $$ |  $$ |$$$$$$$$\ \$$$$$$  |$$ |       $$$$$$  |$$ | \$$ |\$$$$$$  |$$$$$$\   
         right: -190px; 
     }
 
+
+    img.info {
+        right: 80px; 
+    }
+
+    .text-info {
+        right: 80px; 
+    }
+
     .modal-content {
         top: 20%; 
         left: 25%; 
@@ -843,6 +860,10 @@ $$ |  $$ |$$$$$$$$\ \$$$$$$  |$$ |       $$$$$$  |$$ | \$$ |\$$$$$$  |$$$$$$\   
 
     .text-info {
         right: 0px; 
+    }
+
+    .slider-title img {
+        top: -20px; 
     }
 }
 
